@@ -1,0 +1,222 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+/* Reset and base */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f7f9fc;
+  color: #333;
+}
+
+.container {
+  max-width: 960px;
+  margin: 20px auto;
+  background: #fff;
+  padding: 20px 30px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+/* Heading */
+h1,
+h2,
+h3 {
+  color: #2c3e50;
+  margin-bottom: 15px;
+}
+
+/* Button styles */
+.add-button {
+  background: #2196f3;
+  padding: 12px 26px;
+  border-radius: 6px;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  margin-right: 10px;
+  font-size: 1rem;
+}
+
+
+/* Tables */
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin-top: 15px;
+}
+
+th,
+td {
+  text-align: left;
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+th {
+  background-color: #3498db;
+  color: white;
+}
+
+tr:hover {
+  background-color: #f1f1f1;
+}
+
+/* Inputs and textarea */
+input[type="text"],
+input[type="number"],
+textarea {
+  width: 100%;
+  padding: 8px;
+  margin: 5px 0 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+}
+
+/* Responsive Flexbox for forms */
+form>div {
+  margin-bottom: 15px;
+}
+
+@media (min-width: 600px) {
+  form>div {
+    display: flex;
+    align-items: center;
+  }
+
+  form>div>label {
+    width: 160px;
+    font-weight: 600;
+  }
+
+  form>div>input,
+  form>div>textarea {
+    flex-grow: 1;
+  }
+}
+
+/* Navigation links */
+a {
+  color: #3498db;
+  text-decoration: none;
+  margin-right: 10px;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Pagination */
+.pagination {
+  margin-top: 15px;
+  text-align: center;
+}
+
+.pagination button {
+  margin: 0 5px;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 480px) {
+  .container {
+    margin: 10px;
+    padding: 15px;
+  }
+
+  table,
+  thead,
+  tbody,
+  th,
+  td,
+  tr {
+    display: block;
+  }
+
+  th {
+    background: none;
+    color: #333;
+  }
+
+  tr {
+    margin-bottom: 15px;
+    border-bottom: 2px solid #ddd;
+  }
+
+  td {
+    padding-left: 50%;
+    position: relative;
+    text-align: right;
+    border-bottom: 1px solid #eee;
+  }
+
+  td::before {
+    content: attr(data-label);
+    position: absolute;
+    left: 10px;
+    width: 45%;
+    padding-left: 15px;
+    font-weight: 600;
+    text-align: left;
+  }
+
+  form>div {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  form>div>label {
+    width: 100%;
+    margin-bottom: 5px;
+  }
+
+  .button,
+  button {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+}

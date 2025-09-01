@@ -1,0 +1,341 @@
+/* Container styling */
+.container {
+    margin: 30px auto;
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 2px 16px rgba(44, 62, 80, 0.08), 0 0 0 1px rgba(44, 62, 80, 0.05);
+    padding: 32px 30px;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    /* title left, button right */
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.header-container h2 {
+    margin: 0;
+    /* removes extra spacing */
+}
+
+@media (max-width: 600px) {
+    .header-container {
+        flex-direction: column;
+        align-items: flex-start;
+        /* keep title aligned left */
+        gap: 10px;
+        /* spacing between title and button */
+    }
+
+    .header-container .back-btn {
+        align-self: stretch;
+        /* button takes full width */
+    }
+
+    h2 {
+        font-size: 28px;
+        text-align: center;
+    }
+}
+
+h2,
+h3 {
+    margin-bottom: 24px;
+    color: #2c3e50;
+}
+
+form>div {
+    margin-bottom: 18px;
+    display: flex;
+}
+
+label {
+    font-weight: 600;
+    margin-bottom: 7px;
+}
+
+input[type="text"],
+textarea {
+    width: 100%;
+    padding: 10px 13px;
+    border: 1px solid #b5bfc8;
+    border-radius: 5px;
+    background: #f7fafc;
+    font-size: 1rem;
+    transition: border-color 0.2s;
+    outline: none;
+}
+
+input[type="text"]:focus,
+textarea:focus {
+    border-color: #3498db;
+}
+
+textarea {
+    min-height: 42px;
+    resize: vertical;
+}
+
+.error-message {
+    color: #e53935;
+    font-size: 0.95em;
+    margin-top: 3px;
+}
+
+/* Address box */
+.address-box {
+    border: 1px solid #e2e4e8;
+    background: #f8fafc;
+    border-radius: 6px;
+    padding: 18px 16px;
+    margin-bottom: 16px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: end;
+    gap: 14px;
+}
+
+.address-box label {
+    margin-bottom: 4px;
+    font-size: 0.98rem;
+}
+
+.address-box textarea,
+.address-box input[type="text"] {
+    margin-bottom: 0;
+}
+
+@media (min-width: 700px) {
+    .address-box {
+        flex-wrap: nowrap;
+        align-items: flex-end;
+    }
+
+    .address-box label {
+        min-width: 70px;
+    }
+
+    .address-box>div {
+        flex: 1 0 125px;
+        margin-right: 10px;
+    }
+
+    .address-box>div:last-child {
+        margin-right: 0;
+    }
+}
+
+.address-box button {
+    background: #3498db;
+    color: #fff;
+    padding: 8px 13px;
+    border-radius: 5px;
+    border: none;
+    font-size: 0.97em;
+    margin-left: 6px;
+    cursor: pointer;
+    transition: background 0.18s;
+    outline: none;
+}
+
+.address-box button:hover {
+    background: #1c6eb6;
+}
+
+
+button[disabled] {
+    background: #e0e7ef;
+    color: #888;
+    cursor: not-allowed;
+}
+
+@media (max-width: 600px) {
+    .container {
+        padding: 13px 2vw;
+    }
+
+    .address-box {
+        flex-direction: column;
+        padding: 11px 6px;
+    }
+
+    .address-box>div {
+        margin-right: 0 !important;
+        width: 100%;
+    }
+
+    input[type="text"],
+    textarea {
+        font-size: 0.96rem;
+    }
+
+    button[type="button"],
+    button[type="submit"] {
+        width: 100%;
+        padding-left: 0;
+        padding-right: 0;
+        margin-bottom: 10px;
+    }
+}
+
+.back-button-container {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 20px;
+}
+
+.back-button {
+    background-color: #999;
+    padding: 8px 15px;
+    border-radius: 6px;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.back-button:hover {
+    background-color: #777;
+}
+
+@media (min-width: 700px) {
+    .address-box {
+        box-shadow: 0 2px 8px rgba(44, 62, 80, 0.04);
+        gap: 24px;
+        align-items: flex-end;
+    }
+
+    .address-box>div {
+        flex: 1 0 110px;
+        margin-right: 0;
+        min-width: 110px;
+    }
+
+    .address-box>div:first-child textarea {
+        min-width: 150px;
+        min-height: 44px;
+    }
+
+    .address-box button {
+        align-self: flex-end;
+        height: 38px;
+        margin-left: 26px;
+        margin-bottom: 2px;
+    }
+}
+
+.address-box button {
+    background: #e53935 !important;
+    color: #fff !important;
+    border: none;
+    font-weight: 700;
+    padding: 8px 18px;
+    border-radius: 5px;
+    transition: background 0.15s;
+    outline: none;
+}
+
+.address-box button:hover {
+    background: #b71c1c !important;
+    color: #fff !important;
+}
+
+.address-box {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr auto;
+    grid-gap: 16px;
+    padding: 18px 16px;
+    border: 1px solid #e2e4e8;
+    background: #f8fafc;
+    border-radius: 6px;
+    margin-bottom: 16px;
+}
+
+/* Address details full width row */
+.address-details {
+    grid-column: 1 / -1;
+    margin-bottom: 10px;
+}
+
+.address-row {
+    display: contents;
+    /* let fields follow grid */
+}
+
+.address-field {
+    display: flex;
+    flex-direction: column;
+}
+
+.remove-address-btn {
+    background: #e53935;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-weight: 600;
+    padding: 10px 18px;
+    cursor: pointer;
+    transition: background 0.2s;
+    align-self: flex-end;
+    min-width: 140px;
+    height: 40px;
+    outline: none;
+}
+
+.remove-address-btn:hover {
+    background: #b71c1c;
+}
+
+/* Tablet */
+@media (max-width: 900px) {
+    .address-box {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .address-details {
+        grid-column: 1 / -1;
+    }
+
+    .remove-address-btn {
+        width: 100%;
+    }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+    .address-box {
+        grid-template-columns: 1fr;
+    }
+
+    .address-details {
+        grid-column: 1 / -1;
+    }
+
+    .remove-address-btn {
+        width: 100%;
+        margin-top: 10px;
+    }
+}
+
+
+.back-btn {
+    background: linear-gradient(135deg, #6a686d, #8a93a3);
+    padding: 10px 18px;
+    border-radius: 6px;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border: none;
+    outline: none;
+}
+
+.back-btn:hover {
+    background: linear-gradient(135deg, #3c3b3d, #686f7a) !important;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    border: none;
+    outline: none;
+}

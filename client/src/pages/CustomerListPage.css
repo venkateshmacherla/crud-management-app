@@ -1,0 +1,277 @@
+/* Container */
+.container {
+    margin: 30px auto;
+    background: #fff;
+    border-radius: 14px;
+    box-shadow: 0 2px 16px rgba(44, 62, 80, 0.07), 0 0 0 1px rgba(44, 62, 80, 0.05);
+    padding: 30px 24px;
+}
+
+/* Heading */
+h1 {
+    margin: 0 0 18px 0;
+    font-size: 30px;
+}
+
+@media (max-width: 480px) {
+    h1 {
+        text-align: center;
+        margin-bottom: 20px;
+        font-size: 25px;
+    }
+}
+
+
+
+/* CREATE CUSTOMER: green style */
+.create-btn,
+button.create-btn {
+    background: #36be6f;
+    color: #fff;
+    font-weight: 700;
+    border-radius: 5px;
+    font-size: 1rem;
+    margin: 18px 0 0 0;
+    padding: 12px 26px;
+    transition: background 0.2s;
+    border: none;
+    cursor: pointer;
+    display: inline-block;
+    outline: none;
+}
+
+.create-btn:hover {
+    background: #2a7e4c;
+    outline: none;
+}
+
+/* Filter bar */
+.filter-bar {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-bottom: 18px;
+    margin-top: 20px;
+}
+
+.filter-bar input {
+    padding: 9px 12px;
+    border-radius: 4px;
+    border: 1px solid #bbb;
+    outline: none;
+    font-size: 1rem;
+    background: #f7fafc;
+    transition: border-color 0.2s;
+}
+
+.filter-bar input:focus {
+    border-color: #3498db;
+}
+
+.filter-bar button {
+    padding: 9px 18px;
+    margin: 0;
+    border-radius: 4px;
+    border: none;
+    background: #3498db;
+    color: #fff;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.filter-bar button:hover {
+    background: #217dbb;
+}
+
+/* Table */
+.customer-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #fff;
+}
+
+.customer-table th {
+    background: #3498db;
+    color: #fff;
+    font-weight: 700;
+    padding: 11px;
+    border: none;
+}
+
+.customer-table td {
+    padding: 9px;
+    border: none;
+    border-bottom: 1px solid #e4e4e4;
+    font-size: 1rem;
+    text-align: left;
+}
+
+.customer-table tr:hover {
+    background: #f6fafd;
+}
+
+.customer-table td.actions {
+    white-space: nowrap;
+}
+
+.customer-table td.actions button {
+    background: #eee;
+    color: #222;
+    font-size: 0.95rem;
+    border-radius: 5px;
+    border: none;
+    padding: 6px 13px;
+    margin-right: 7px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.customer-table td.actions button:hover {
+    background: #3498db;
+    color: #fff;
+}
+
+/* Pagination Bar */
+.pagination-bar {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 18px;
+}
+
+.pagination-bar button {
+    padding: 7px 18px;
+    background: #3498db;
+    color: #fff;
+    font-weight: 600;
+    border: none;
+    border-radius: 4px;
+    min-width: 65px;
+    transition: background 0.2s;
+}
+
+.pagination-bar button:disabled {
+    background: #e0e7ef;
+    color: #888;
+    cursor: not-allowed;
+}
+
+.pagination-bar span {
+    font-weight: 500;
+}
+
+/* Responsive layout tweaks */
+@media (max-width: 700px) {
+    .container {
+        box-sizing: border-box;
+        padding: 14px 3vw;
+        max-width: 98vw;
+    }
+
+    .filter-bar {
+        flex-direction: column;
+        gap: 9px;
+    }
+
+    .customer-table th,
+    .customer-table td {
+        font-size: 0.99rem;
+        padding: 8px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 10px 2vw;
+    }
+
+    .customer-table,
+    .customer-table thead,
+    .customer-table tbody,
+    .customer-table th,
+    .customer-table td,
+    .customer-table tr {
+        display: block;
+        width: 100%;
+    }
+
+    .customer-table thead {
+        display: none;
+    }
+
+    .customer-table tr {
+        margin-bottom: 18px;
+        border-bottom: 2px solid #e6e6e6;
+    }
+
+    .customer-table td {
+        text-align: right;
+        padding-left: 55%;
+        position: relative;
+        min-height: 34px;
+        border-bottom: 1px dashed #e2e2e2;
+    }
+
+    .customer-table td:before {
+        content: attr(data-label);
+        position: absolute;
+        left: 10px;
+        width: 50%;
+        text-align: left;
+        color: #217dbb;
+        font-weight: 600;
+    }
+
+    .customer-table td.actions {
+        padding-bottom: 18px;
+    }
+
+    .button,
+    .create-btn,
+    button[type="button"] {
+        width: 100%;
+        min-width: unset;
+        margin-bottom: 16px;
+    }
+}
+
+
+@media (max-width: 480px) {
+
+    .customer-table td.actions {
+        display: flex !important;
+        flex-direction: row !important;
+        justify-content: flex-end;
+        gap: 8px;
+        padding-bottom: 18px;
+        padding-left: 0;
+    }
+
+    .customer-table td.actions button {
+        width: auto !important;
+        min-width: 80px;
+        margin-bottom: 0;
+        margin-right: 0;
+        font-size: 0.98rem;
+        padding: 7px 9px;
+    }
+
+    .pagination-bar {
+        flex-direction: row !important;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .pagination-bar button {
+        width: auto !important;
+        min-width: 70px;
+        margin-bottom: 0;
+        font-size: 1rem;
+        padding: 8px 14px;
+    }
+
+    .pagination-bar span {
+        margin: 0 5px;
+    }
+}
